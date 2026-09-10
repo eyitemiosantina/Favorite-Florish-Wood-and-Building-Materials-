@@ -1,1549 +1,417 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <meta
-    name="description"
-    content="Favourite Florish Wood & Building Materials — quality building materials, timber, roofing materials, tools and more in Warri, Delta State."
-  />
-
-  <title>Favourite Florish | Wood & Building Materials</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
-  <link rel="stylesheet" href="/style.css" />
-</head>
-
-<body>
-
-  <!-- ================= HEADER ================= -->
-
-  <header class="site-header">
-    <div class="container header-inner">
-
-      <a href="#home" class="brand">
-        <span class="brand-mark">FF</span>
-
-        <span class="brand-text">
-          <strong>Favourite Florish</strong>
-          <small>Wood & Building Materials</small>
-        </span>
-      </a>
-
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Open menu"
-      >
-        ☰
-      </button>
-
-      <nav class="main-nav" id="mainNav">
-
-        <a href="#home">Home</a>
-        <a href="#categories">Categories</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-
-        <button
-          class="cart-button"
-          id="openCart"
-          type="button"
-        >
-          Cart
-          <span id="cartCount">0</span>
-        </button>
-
-      </nav>
-
-    </div>
-  </header>
-
-
-  <main>
-
-    <!-- ================= HERO ================= -->
-
-    <section class="hero" id="home">
-
-      <div class="container hero-grid">
-
-        <div class="hero-content">
-
-          <span class="eyebrow">
-            TRUSTED BUILDING MATERIALS SUPPLIER
-          </span>
-
-          <h1>
-            Quality materials.
-            <span>Reliable supply.</span>
-            Built for every project.
-          </h1>
-
-          <p>
-            From timber and plywood to roofing materials, cement,
-            tools and everyday building supplies — get what you need
-            for your next project from one trusted location.
-          </p>
-
-          <div class="hero-actions">
-
-            <a href="#products" class="btn btn-primary">
-              Shop Materials
-            </a>
-
-            <a href="#quote" class="btn btn-outline">
-              Request a Quote
-            </a>
-
-          </div>
-
-          <div class="hero-details">
-
-            <div>
-              <strong>Mammy Market</strong>
-              <span>Sapele Road, Warri</span>
-            </div>
-
-            <div>
-              <strong>Mon – Sat</strong>
-              <span>7:00 AM – 6:30 PM</span>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="hero-panel">
-
-          <div class="hero-panel-top">
-            <span>FAVOURITE FLORISH</span>
-            <span>WARri, DELTA STATE</span>
-          </div>
-
-          <div class="hero-material">
-            <div class="material-lines"></div>
-
-            <div class="material-copy">
-              <span>BUILD WITH CONFIDENCE</span>
-              <h2>
-                Materials that move
-                your project forward.
-              </h2>
-            </div>
-          </div>
-
-          <div class="hero-panel-bottom">
-
-            <div>
-              <small>AVAILABLE</small>
-              <strong>In-store</strong>
-            </div>
-
-            <div>
-              <small>ORDER</small>
-              <strong>Online</strong>
-            </div>
-
-            <div>
-              <small>OPTION</small>
-              <strong>Delivery / Pickup</strong>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= TRUST BAR ================= -->
-
-    <section class="trust-bar">
-
-      <div class="container trust-grid">
-
-        <div>
-          <strong>Wide Selection</strong>
-          <span>Materials for different project needs</span>
-        </div>
-
-        <div>
-          <strong>Flexible Ordering</strong>
-          <span>Delivery or convenient store pickup</span>
-        </div>
-
-        <div>
-          <strong>Local & Reliable</strong>
-          <span>Serving customers in Warri and beyond</span>
-        </div>
-
-        <div>
-          <strong>Need Help?</strong>
-          <span>Call or WhatsApp our team</span>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= CATEGORIES ================= -->
-
-    <section class="section" id="categories">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div>
-            <span class="eyebrow">SHOP BY CATEGORY</span>
-
-            <h2>
-              Materials for the job.
-            </h2>
-          </div>
-
-          <p>
-            Browse our main product categories and find
-            the materials you need for construction,
-            renovation, repairs and everyday use.
-          </p>
-
-        </div>
-
-
-        <div class="category-grid">
-
-          <button
-            class="category-card"
-            data-category="Timber & Wood"
-            type="button"
-          >
-            <span class="category-number">01</span>
-            <strong>Timber & Wood</strong>
-            <small>2×2, 2×3, 2×4, 1×6 and more</small>
-          </button>
-
-          <button
-            class="category-card"
-            data-category="Plywood & Boards"
-            type="button"
-          >
-            <span class="category-number">02</span>
-            <strong>Plywood & Boards</strong>
-            <small>Boards for different building needs</small>
-          </button>
-
-          <button
-            class="category-card"
-            data-category="Building Materials"
-            type="button"
-          >
-            <span class="category-number">03</span>
-            <strong>Building Materials</strong>
-            <small>Cement, blocks, nails and essentials</small>
-          </button>
-
-          <button
-            class="category-card"
-            data-category="Roofing Materials"
-            type="button"
-          >
-            <span class="category-number">04</span>
-            <strong>Roofing Materials</strong>
-            <small>Materials for roofing projects</small>
-          </button>
-
-          <button
-            class="category-card"
-            data-category="Tools & Hardware"
-            type="button"
-          >
-            <span class="category-number">05</span>
-            <strong>Tools & Hardware</strong>
-            <small>Hammers, saws, cutlasses and more</small>
-          </button>
-
-          <button
-            class="category-card"
-            data-category="Tarpaulin & Nets"
-            type="button"
-          >
-            <span class="category-number">06</span>
-            <strong>Tarpaulin & Nets</strong>
-            <small>Useful materials for various applications</small>
-          </button>
-
-          <button
-            class="category-card"
-            data-category="Carpets"
-            type="button"
-          >
-            <span class="category-number">07</span>
-            <strong>Carpets</strong>
-            <small>Practical flooring options</small>
-          </button>
-
-          <button
-            class="category-card"
-            data-category="General Materials"
-            type="button"
-          >
-            <span class="category-number">08</span>
-            <strong>General Materials</strong>
-            <small>Other useful supplies available in-store</small>
-          </button>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= PRODUCTS ================= -->
-
-    <section class="section products-section" id="products">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div>
-            <span class="eyebrow">PRODUCT CATALOGUE</span>
-
-            <h2>
-              Explore our materials.
-            </h2>
-          </div>
-
-          <p>
-            Product prices and availability may change.
-            For bulk purchases or items marked
-            “Price on request”, contact us directly.
-          </p>
-
-        </div>
-
-
-        <div class="product-tools">
-
-          <div class="search-box">
-
-            <input
-              type="search"
-              id="productSearch"
-              placeholder="Search materials..."
-              autocomplete="off"
-            />
-
-          </div>
-
-
-          <select id="categoryFilter">
-
-            <option value="">All Categories</option>
-
-            <option value="Timber & Wood">
-              Timber & Wood
-            </option>
-
-            <option value="Plywood & Boards">
-              Plywood & Boards
-            </option>
-
-            <option value="Building Materials">
-              Building Materials
-            </option>
-
-            <option value="Roofing Materials">
-              Roofing Materials
-            </option>
-
-            <option value="Tools & Hardware">
-              Tools & Hardware
-            </option>
-
-            <option value="Tarpaulin & Nets">
-              Tarpaulin & Nets
-            </option>
-
-            <option value="Carpets">
-              Carpets
-            </option>
-
-            <option value="General Materials">
-              General Materials
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div
-          id="productsGrid"
-          class="product-grid"
-        >
-
-          <!-- Products will be loaded here -->
-
-          <article class="empty-products">
-
-            <span>PRODUCT CATALOGUE</span>
-
-            <h3>
-              Products will appear here.
-            </h3>
-
-            <p>
-              The product catalogue will be connected
-              to the Favourite Florish inventory system.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= TIMBER SIZES ================= -->
-
-    <section class="materials-highlight">
-
-      <div class="container materials-grid">
-
-        <div>
-
-          <span class="eyebrow">
-            TIMBER & WOOD
-          </span>
-
-          <h2>
-            Different wood sizes.
-            One trusted supplier.
-          </h2>
-
-          <p>
-            Looking for a particular timber size?
-            We stock common sizes and can help you
-            enquire about other sizes available.
-          </p>
-
-          <a
-            href="#quote"
-            class="btn btn-light"
-          >
-            Ask About Timber
-          </a>
-
-        </div>
-
-
-        <div class="size-list">
-
-          <div>
-            <strong>2 × 2</strong>
-            <span>Timber</span>
-          </div>
-
-          <div>
-            <strong>2 × 3</strong>
-            <span>Timber</span>
-          </div>
-
-          <div>
-            <strong>2 × 4</strong>
-            <span>Timber</span>
-          </div>
-
-          <div>
-            <strong>1 × 6</strong>
-            <span>Timber</span>
-          </div>
-
-          <div>
-            <strong>OTHER</strong>
-            <span>Sizes available</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= WHY US ================= -->
-
-    <section class="section">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div>
-            <span class="eyebrow">WHY FAVOURITE FLORISH</span>
-
-            <h2>
-              Straightforward service.
-              Dependable materials.
-            </h2>
-          </div>
-
-        </div>
-
-
-        <div class="benefit-grid">
-
-          <article class="benefit">
-
-            <span>01</span>
-
-            <h3>
-              Wide Selection
-            </h3>
-
-            <p>
-              From basic tools to timber, roofing and
-              construction materials, we bring many
-              everyday project essentials together.
-            </p>
-
-          </article>
-
-
-          <article class="benefit">
-
-            <span>02</span>
-
-            <h3>
-              Flexible Ordering
-            </h3>
-
-            <p>
-              Place an order online, choose delivery
-              where available, or arrange a convenient
-              store pickup.
-            </p>
-
-          </article>
-
-
-          <article class="benefit">
-
-            <span>03</span>
-
-            <h3>
-              Bulk Enquiries
-            </h3>
-
-            <p>
-              Contractors, artisans, businesses and
-              larger projects can contact us for
-              quantities and quotations.
-            </p>
-
-          </article>
-
-
-          <article class="benefit">
-
-            <span>04</span>
-
-            <h3>
-              Local Service
-            </h3>
-
-            <p>
-              Visit us at Mammy Market on Sapele Road
-              in Warri or contact the team before making
-              your trip.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= ORDER PROCESS ================= -->
-
-    <section class="section process-section">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div>
-            <span class="eyebrow">HOW ORDERING WORKS</span>
-
-            <h2>
-              From selection to delivery.
-            </h2>
-          </div>
-
-        </div>
-
-
-        <div class="process-grid">
-
-          <div class="process-step">
-
-            <span>01</span>
-
-            <h3>
-              Choose your materials
-            </h3>
-
-            <p>
-              Browse the catalogue and add available
-              products to your cart.
-            </p>
-
-          </div>
-
-
-          <div class="process-step">
-
-            <span>02</span>
-
-            <h3>
-              Review your order
-            </h3>
-
-            <p>
-              Check quantities and provide your contact
-              and order details.
-            </p>
-
-          </div>
-
-
-          <div class="process-step">
-
-            <span>03</span>
-
-            <h3>
-              Choose delivery or pickup
-            </h3>
-
-            <p>
-              Select delivery where available or arrange
-              to collect your order from the store.
-            </p>
-
-          </div>
-
-
-          <div class="process-step">
-
-            <span>04</span>
-
-            <h3>
-              We confirm your order
-            </h3>
-
-            <p>
-              The Favourite Florish team confirms
-              availability, delivery details and payment
-              arrangements.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= QUOTE ================= -->
-
-    <section class="quote-section" id="quote">
-
-      <div class="container quote-grid">
-
-        <div>
-
-          <span class="eyebrow">
-            BULK ORDERS & QUOTATIONS
-          </span>
-
-          <h2>
-            Tell us what you need.
-          </h2>
-
-          <p>
-            Planning a building project or buying in
-            larger quantities? Send us your requirements
-            and our team can respond with availability
-            and pricing.
-          </p>
-
-          <div class="quote-contact">
-
-            <strong>
-              Call: 09127495530
-            </strong>
-
-            <strong>
-              WhatsApp: +234 703 767 1791
-            </strong>
-
-          </div>
-
-        </div>
-
-
-        <form
-          id="quoteForm"
-          class="quote-form"
-        >
-
-          <label>
-            Your Name
-
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Enter your name"
-            />
-
-          </label>
-
-
-          <label>
-            Phone Number
-
-            <input
-              type="tel"
-              name="phone"
-              required
-              placeholder="Phone number"
-            />
-
-          </label>
-
-
-          <label>
-            What do you need?
-
-            <textarea
-              name="message"
-              required
-              rows="5"
-              placeholder="Tell us the materials, sizes and quantities you need..."
-            ></textarea>
-
-          </label>
-
-
-          <button
-            type="submit"
-            class="btn btn-primary"
-          >
-            Submit Quote Request
-          </button>
-
-        </form>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section class="section" id="about">
-
-      <div class="container about-grid">
-
-        <div class="about-label">
-
-          <span class="eyebrow">
-            ABOUT THE BUSINESS
-          </span>
-
-          <div class="about-mark">
-            FF
-          </div>
-
-        </div>
-
-
-        <div class="about-content">
-
-          <h2>
-            A dependable source for building
-            and everyday project materials.
-          </h2>
-
-          <p>
-            Favourite Florish Wood & Building Materials
-            serves customers looking for practical,
-            dependable materials for construction,
-            repairs, renovation and general use.
-          </p>
-
-          <p>
-            Our product range includes timber, plywood,
-            roofing materials, cement, blocks, nails,
-            tools, carpets, tarpaulin, nets, ropes and
-            other useful supplies.
-          </p>
-
-          <p>
-            Customers can visit our physical store or
-            place orders online and arrange delivery or
-            store pickup, subject to availability and
-            location.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= STORE INFORMATION ================= -->
-
-    <section class="store-section" id="contact">
-
-      <div class="container store-grid">
-
-        <div class="store-info">
-
-          <span class="eyebrow">
-            VISIT OR CONTACT US
-          </span>
-
-          <h2>
-            Come by the store.
-            Or order from wherever you are.
-          </h2>
-
-          <div class="info-list">
-
-            <div>
-              <small>ADDRESS</small>
-
-              <strong>
-                Mammy Market,<br>
-                Sapele Road,<br>
-                Warri, Delta State.
-              </strong>
-            </div>
-
-
-            <div>
-              <small>OPENING HOURS</small>
-
-              <strong>
-                Monday – Saturday<br>
-                7:00 AM – 6:30 PM
-              </strong>
-            </div>
-
-
-            <div>
-              <small>PHONE</small>
-
-              <strong>
-                09127495530
-              </strong>
-            </div>
-
-
-            <div>
-              <small>WHATSAPP</small>
-
-              <strong>
-                +234 703 767 1791
-              </strong>
-            </div>
-
-          </div>
-
-
-          <div class="contact-actions">
-
-            <a
-              href="tel:09127495530"
-              class="btn btn-primary"
-            >
-              Call Us
-            </a>
-
-            <a
-              href="https://wa.me/2347037671791"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-outline"
-            >
-              WhatsApp Us
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="location-card">
-
-          <div class="location-inner">
-
-            <span>
-              FAVOURITE FLORISH
-            </span>
-
-            <h3>
-              Mammy Market
-            </h3>
-
-            <p>
-              Sapele Road, Warri,<br>
-              Delta State, Nigeria.
-            </p>
-
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Mammy+Market+Sapele+Road+Warri+Delta+State"
-              target="_blank"
-              rel="noopener"
-              class="location-link"
-            >
-              Open location in Maps →
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= FAQ ================= -->
-
-    <section class="section faq-section">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div>
-            <span class="eyebrow">FAQ</span>
-
-            <h2>
-              Before you order.
-            </h2>
-          </div>
-
-        </div>
-
-
-        <div class="faq-list">
-
-          <details>
-
-            <summary>
-              Can I order online and pick it up at the store?
-            </summary>
-
-            <p>
-              Yes. During checkout you can select store
-              pickup where available. The team will confirm
-              when your order is ready.
-            </p>
-
-          </details>
-
-
-          <details>
-
-            <summary>
-              Do you offer delivery?
-            </summary>
-
-            <p>
-              Delivery can be arranged depending on your
-              location, the order and availability. Delivery
-              details will be confirmed by the business.
-            </p>
-
-          </details>
-
-
-          <details>
-
-            <summary>
-              Can I buy materials in bulk?
-            </summary>
-
-            <p>
-              Yes. Contact us with the materials,
-              specifications and quantities you need for
-              a bulk quotation.
-            </p>
-
-          </details>
-
-
-          <details>
-
-            <summary>
-              Will every product have a fixed price?
-            </summary>
-
-            <p>
-              Some products can display a listed price,
-              while others may show “Price on request”
-              because availability and market prices can
-              change.
-            </p>
-
-          </details>
-
-
-          <details>
-
-            <summary>
-              Can I simply visit the physical store?
-            </summary>
-
-            <p>
-              Yes. You can visit Favourite Florish at
-              Mammy Market, Sapele Road, Warri during
-              opening hours.
-            </p>
-
-          </details>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- ================= CART DRAWER ================= -->
-
-  <aside
-    class="cart-drawer"
-    id="cartDrawer"
-    aria-hidden="true"
-  >
-
-    <div class="cart-header">
-
-      <div>
-        <span class="eyebrow">YOUR ORDER</span>
-
-        <h2>
-          Shopping Cart
-        </h2>
-      </div>
-
-      <button
-        id="closeCart"
-        class="close-button"
-        type="button"
-        aria-label="Close cart"
-      >
-        ×
-      </button>
-
-    </div>
-
-
-    <div
-      id="cartItems"
-      class="cart-items"
-    >
-
-      <div class="cart-empty">
-
-        <h3>
-          Your cart is empty.
-        </h3>
-
-        <p>
-          Add materials from the catalogue to begin.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div class="cart-footer">
-
-      <div class="cart-total-row">
-
-        <span>
-          Estimated Total
-        </span>
-
-        <strong id="cartTotal">
-          ₦0
-        </strong>
-
-      </div>
-
-      <small>
-        Final price, availability and delivery charges
-        will be confirmed by Favourite Florish.
-      </small>
-
-      <button
-        id="checkoutButton"
-        class="btn btn-primary full-width"
-        type="button"
-      >
-        Proceed to Checkout
-      </button>
-
-    </div>
-
-  </aside>
-
-
-  <!-- ================= CART OVERLAY ================= -->
-
-  <div
-    class="overlay"
-    id="overlay"
-  ></div>
-
-
-  <!-- ================= CHECKOUT MODAL ================= -->
-
-  <div
-    class="modal"
-    id="checkoutModal"
-    aria-hidden="true"
-  >
-
-    <div class="modal-box">
-
-      <div class="modal-header">
-
-        <div>
-
-          <span class="eyebrow">
-            CHECKOUT
-          </span>
-
-          <h2>
-            Complete your order
-          </h2>
-
-        </div>
-
-        <button
-          id="closeCheckout"
-          class="close-button"
-          type="button"
-        >
-          ×
-        </button>
-
-      </div>
-
-
-      <form
-        id="checkoutForm"
-        class="checkout-form"
-      >
-
-        <div class="form-grid">
-
-          <label>
-            Full Name
-
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Your full name"
-            />
-
-          </label>
-
-
-          <label>
-            Phone Number
-
-            <input
-              type="tel"
-              name="phone"
-              required
-              placeholder="Your phone number"
-            />
-
-          </label>
-
-        </div>
-
-
-        <label>
-          Email Address
-          <span class="optional">(optional)</span>
-
-          <input
-            type="email"
-            name="email"
-            placeholder="you@example.com"
-          />
-
-        </label>
-
-
-        <fieldset>
-
-          <legend>
-            How would you like to receive your order?
-          </legend>
-
-          <label class="choice">
-
-            <input
-              type="radio"
-              name="fulfillment"
-              value="pickup"
-              checked
-            />
-
-            <span>
-              <strong>Store Pickup</strong>
-              <small>
-                Collect from our Warri store.
-              </small>
-            </span>
-
-          </label>
-
-
-          <label class="choice">
-
-            <input
-              type="radio"
-              name="fulfillment"
-              value="delivery"
-            />
-
-            <span>
-              <strong>Delivery</strong>
-              <small>
-                Delivery availability will be confirmed.
-              </small>
-            </span>
-
-          </label>
-
-        </fieldset>
-
-
-        <div
-          id="deliveryAddressGroup"
-          class="hidden"
-        >
-
-          <label>
-            Delivery Address
-
-            <textarea
-              name="address"
-              rows="3"
-              placeholder="Enter your delivery address"
-            ></textarea>
-
-          </label>
-
-        </div>
-
-
-        <label>
-          Additional Notes
-          <span class="optional">(optional)</span>
-
-          <textarea
-            name="notes"
-            rows="3"
-            placeholder="Any size, quantity or delivery details?"
-          ></textarea>
-
-        </label>
-
-
-        <div class="checkout-summary">
-
-          <span>
-            Order Total
-          </span>
-
-          <strong id="checkoutTotal">
-            ₦0
-          </strong>
-
-        </div>
-
-
-        <p class="payment-note">
-          Payment arrangements and final delivery charges
-          will be confirmed by Favourite Florish before
-          the order is completed.
-        </p>
-
-
-        <button
-          type="submit"
-          class="btn btn-primary full-width"
-        >
-          Place Order
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
-
-
-  <!-- ================= PRODUCT MODAL ================= -->
-
-  <div
-    class="modal"
-    id="productModal"
-    aria-hidden="true"
-  >
-
-    <div class="modal-box product-modal-box">
-
-      <button
-        id="closeProduct"
-        class="close-button product-close"
-        type="button"
-      >
-        ×
-      </button>
-
-      <div id="productDetails">
-
-        <!-- Product details loaded here -->
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- ================= ORDER SUCCESS ================= -->
-
-  <div
-    class="modal"
-    id="successModal"
-    aria-hidden="true"
-  >
-
-    <div class="modal-box success-box">
-
-      <span class="success-mark">
-        ✓
-      </span>
-
-      <span class="eyebrow">
-        ORDER RECEIVED
-      </span>
-
-      <h2>
-        Thank you for your order.
-      </h2>
-
-      <p>
-        Your order has been submitted successfully.
-        Favourite Florish will contact you to confirm
-        availability, payment and delivery or pickup details.
-      </p>
-
-      <strong id="orderReference">
-        Order reference pending
-      </strong>
-
-      <button
-        id="closeSuccess"
-        class="btn btn-primary"
-        type="button"
-      >
-        Continue Shopping
-      </button>
-
-    </div>
-
-  </div>
-
-
-  <!-- ================= FLOATING WHATSAPP ================= -->
-
-  <a
-    href="https://wa.me/2347037671791"
-    target="_blank"
-    rel="noopener"
-    class="whatsapp-button"
-    aria-label="Chat with Favourite Florish on WhatsApp"
-  >
-    <span>WhatsApp</span>
-  </a>
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer class="site-footer">
-
-    <div class="container footer-grid">
-
-      <div>
-
-        <a href="#home" class="brand footer-brand">
-
-          <span class="brand-mark">
-            FF
-          </span>
-
-          <span class="brand-text">
-
-            <strong>
-              Favourite Florish
-            </strong>
-
-            <small>
-              Wood & Building Materials
-            </small>
-
-          </span>
-
-        </a>
-
-        <p>
-          Quality materials. Reliable supply.
-          Built for every project.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          Explore
-        </h4>
-
-        <a href="#products">
-          Products
-        </a>
-
-        <a href="#categories">
-          Categories
-        </a>
-
-        <a href="#quote">
-          Request a Quote
-        </a>
-
-        <a href="#about">
-          About Us
-        </a>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          Visit
-        </h4>
-
-        <p>
-          Mammy Market,<br>
-          Sapele Road,<br>
-          Warri, Delta State.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          Contact
-        </h4>
-
-        <a href="tel:09127495530">
-          09127495530
-        </a>
-
-        <a href="https://wa.me/2347037671791" target="_blank">
-          WhatsApp
-        </a>
-
-        <p>
-          Mon – Sat<br>
-          7:00 AM – 6:30 PM
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-      <span>
-        © <span id="currentYear"></span>
-        Favourite Florish Wood & Building Materials.
-        All rights reserved.
-      </span>
-
-      <span>
-        Warri, Delta State, Nigeria
-      </span>
-
-    </div>
-
-  </footer>
-
-
-  <script src="/app.js"></script>
-
-</body>
-</html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Favourite Florish | Admin</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+    :root {
+      --navy:#102a43;
+      --navy-dark:#071d33;
+      --blue:#1769d2;
+      --blue-light:#4b91ed;
+
+      --ice:#edf5fc;
+      --ice2:#e2eff9;
+      --paper:#f5f9fd;
+      --card:#eef6fc;
+
+      --text:#173047;
+      --muted:#657b90;
+      --border:#cfdfec;
+
+      --green:#26845c;
+      --red:#c94a4a;
+
+      --shadow:0 14px 40px rgba(16,42,67,.10);
+      --shadow-lg:0 25px 65px rgba(16,42,67,.16);
+
+      --radius:20px;
+    }
+
+    * {
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body {
+      font-family:"DM Sans",sans-serif;
+      background:
+        radial-gradient(circle at 5% 10%,rgba(75,145,237,.10),transparent 28%),
+        radial-gradient(circle at 95% 35%,rgba(23,105,210,.07),transparent 30%),
+        var(--paper);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font:inherit;
+    }
+
+    button {
+      cursor:pointer;
+    }
+
+    /* TOP BAR */
+
+    .topbar {
+      min-height:76px;
+      padding:14px 4%;
+      background:linear-gradient(120deg,#071d33,#0d355c,#1769d2);
+      color:white;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+
+      position:sticky;
+      top:0;
+      z-index:1000;
+
+      box-shadow:0 8px 30px rgba(7,29,51,.18);
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand-icon {
+      width:44px;
+      height:44px;
+      border-radius:13px;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.13);
+      font-size:24px;
+    }
+
+    .brand h1 {
+      font-family:"Playfair Display",serif;
+      font-size:1.2rem;
+    }
+
+    .brand small {
+      color:#c8ddef;
+      font-size:.7rem;
+    }
+
+    .site-btn {
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.1);
+      color:white;
+      padding:10px 15px;
+      border-radius:11px;
+      font-weight:700;
+    }
+
+    /* MAIN */
+
+    .container {
+      width:min(1200px,92%);
+      margin:auto;
+      padding:35px 0 70px;
+    }
+
+    /* WELCOME */
+
+    .welcome {
+      position:relative;
+      overflow:hidden;
+
+      padding:35px;
+      margin-bottom:25px;
+
+      border-radius:26px;
+
+      background:
+        linear-gradient(135deg,#dceefa,#edf6fc 55%,#d2e6f6);
+
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+
+    .welcome:after {
+      content:"🔨";
+      position:absolute;
+      right:45px;
+      top:-8px;
+      font-size:90px;
+      opacity:.12;
+      transform:rotate(-20deg);
+    }
+
+    .eyebrow {
+      color:#1455a4;
+      font-size:.75rem;
+      font-weight:800;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+    }
+
+    .welcome h2 {
+      font-family:"Playfair Display",serif;
+      color:var(--navy);
+      font-size:clamp(2rem,5vw,3rem);
+      line-height:1.1;
+      margin:7px 0 12px;
+    }
+
+    .welcome p {
+      color:var(--muted);
+      max-width:680px;
+    }
+
+    /* STATS */
+
+    .stats {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-bottom:35px;
+    }
+
+    .stat {
+      background:linear-gradient(145deg,#f4f9fd,#e5f1fa);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .stat-icon {
+      font-size:27px;
+      margin-bottom:8px;
+    }
+
+    .stat strong {
+      display:block;
+      font-size:1.9rem;
+      color:var(--navy);
+      line-height:1;
+    }
+
+    .stat span {
+      color:var(--muted);
+      font-size:.8rem;
+    }
+
+    /* SECTION TITLE */
+
+    .section-title {
+      margin-bottom:18px;
+    }
+
+    .section-title h2 {
+      font-family:"Playfair Display",serif;
+      color:var(--navy);
+      font-size:2rem;
+    }
+
+    .section-title p {
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    /* PRODUCT MANAGER */
+
+    .manager {
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:25px;
+      box-shadow:var(--shadow);
+      margin-bottom:30px;
+    }
+
+    .manager-top {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+      margin-bottom:22px;
+    }
+
+    .manager-top h2 {
+      font-family:"Playfair Display",serif;
+      color:var(--navy);
+    }
+
+    .add-btn {
+      border:0;
+      background:linear-gradient(135deg,var(--blue),var(--blue-light));
+      color:white;
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:800;
+      box-shadow:0 8px 20px rgba(23,105,210,.22);
+    }
+
+    /* SEARCH */
+
+    .filters {
+      display:grid;
+      grid-template-columns:1fr 220px;
+      gap:12px;
+      margin-bottom:22px;
+    }
+
+    input,
+    select,
+    textarea {
+      width:100%;
+      border:1px solid var(--border);
+      background:#e8f2fa;
+      color:var(--text);
+      border-radius:12px;
+      padding:12px 14px;
+      outline:none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color:var(--blue-light);
+      box-shadow:0 0 0 4px rgba(75,145,237,.10);
+    }
+
+    /* PRODUCTS */
+
+    .products {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:17px;
+    }
+
+    .product {
+      background:linear-gradient(145deg,#f7fbfe,#e5f1fa);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      transition:.2s ease;
+    }
+
+    .product:hover {
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+      border-color:#9fc3e3;
+    }
+
+    .product-visual {
+      height:130px;
+      border-radius:14px;
+      background:
+        radial-gradient(circle at 25% 25%,rgba(75,145,237,.18),transparent 35%),
+        #dcebf7;
+
+      display:grid;
+      place-items:center;
+
+      font-size:52px;
+      margin-bottom:15px;
+    }
+
+    .product h3 {
+      color:var(--navy);
+      margin-bottom:4px;
+    }
+
+    .product-category {
+      color:#2566a8;
+      font-size:.75rem;
+      font-weight:800;
+    }
+
+    .product-price {
+      margin-top:10px;
+      font-weight:800;
+      color:var(--blue);
+    }
+
+    .availability {
+      display:inline-block;
+      margin-top:8px;
+      padding:5px 9px;
+      border-radius:999px;
+      background:#dff1e8;
+      color:var(--green);
+      font-size:.7rem;
+      font-weight:800;
+    }
+
+    .availability.unavailable {
+      background:#f6dddd;
+      color:var(--red);
+    }
+
+    .product-actions {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:8px;
+      margin-top:15px;
+    }
+
+    .edit-btn {
+      border:0;
+      background:#d9eafb;
+      color:#1459a8;
+      padding:9px;
+      border-radius:10px;
+      font-weight:800;
+    }
+
+    .delete-btn {
+      border:0;
+      background:#f5dddd;
+      color:#b63f3f;
+      padding:9px;
+      border-radius:10px;
+      font-weight:800;
+    }
+
+    /* MODAL */
+
+    .modal {
+      position:fixed;
+      inset:0;
+      z-index:2000;
+
+      background:rgba(7,29,51,.55);
+      backdrop-filter:blur(5px);
+
+      display:none;
+      align-items:center;
+      justify-content:center;
+
+      padding:20px;
+    }
+
+    .modal.show {
+      display:flex;
+    }
+
+    .modal-box {
+      width:min(600px,100%);
+      max-height:90vh;
+      overflow-y:auto;
+
+      background:#edf6fc;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:27px;
+      box-shadow:var(--shadow-lg);
+    }
+
+    .modal-header {
+      display:flex;
+      justify-content:space     

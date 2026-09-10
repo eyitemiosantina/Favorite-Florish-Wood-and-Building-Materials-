@@ -1,0 +1,177 @@
+/* =========================================================
+   FAVOURITE FLORISH
+   Wood & Building Materials
+   Main Website Styles
+   ========================================================= */
+
+:root {
+  --forest: #12372a;
+  --forest-dark: #0b241b;
+  --forest-light: #1d513d;
+
+  --gold: #c49a52;
+  --gold-dark: #9f7938;
+
+  --cream: #f7f4ed;
+  --paper: #ffffff;
+  --soft: #eeece5;
+
+  --text: #1d2420;
+  --muted: #6d746f;
+  --border: #dedfd9;
+
+  --danger: #a63d3d;
+
+  --shadow-sm: 0 8px 25px rgba(16, 36, 27, 0.07);
+  --shadow-lg: 0 20px 55px rgba(16, 36, 27, 0.14);
+
+  --radius: 14px;
+  --radius-lg: 22px;
+
+  --container: 1180px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--paper);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+.container {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gold-dark);
+  margin-bottom: 15px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 48px;
+}
+
+.section-heading h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+  max-width: 700px;
+}
+
+.section-heading p {
+  max-width: 430px;
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: var(--forest);
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand-text strong {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.98rem;
+}
+
+.brand-text small {
+  color: var(--mut

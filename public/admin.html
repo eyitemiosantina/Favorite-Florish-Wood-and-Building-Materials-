@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Favourite Florish | Admin Dashboard</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+    :root {
+      --navy: #102a43;
+      --navy-dark: #071d33;
+      --blue: #1769d2;
+      --blue-light: #4b91ed;
+
+      --ice: #edf5fc;
+      --ice-2: #e3f0fa;
+      --mist: #d5e5f2;
+
+      --paper: #f5f9fd;
+      --card: #eef6fc;
+
+      --text: #173047;
+      --muted: #647b90;
+
+      --border: #cfdfec;
+
+      --green: #25835b;
+      --orange: #d88727;
+      --red: #c94a4a;
+
+      --shadow: 0 14px 40px rgba(16, 42, 67, .10);
+      --shadow-lg: 0 24px 60px rgba(16, 42, 67, .15);
+
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(
+          circle at 5% 10%,
+          rgba(75,145,237,.10),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 95% 35%,
+          rgba(23,105,210,.07),
+          transparent 30%
+        ),
+        var(--paper);
+      min-height: 100vh;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    /* =========================
+       TOP BAR
+       ========================= */
+
+    .topbar {
+      height: 76px;
+      background:
+        linear-gradient(
+          120deg,
+          #071d33,
+          #0d355c,
+          #1769d2
+        );
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 8px 30px rgba(7,29,51,.18);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-icon {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: rgba(255,255,255,.13);
+      font-size: 25px;
+    }
+
+    .brand h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+    }
+
+    .brand small {
+      display: block;
+      color: #cce1f5;
+      font-size: .72rem;
+    }
+
+    .view-site {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.20);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 11px;
+      font-weight: 700;
+    }
+
+    .view-site:hover {
+      background: rgba(255,255,255,.20);
+    }
+
+    /* =========================
+       LAYOUT
+       ========================= */
+
+    .dashboard {
+      width: min(1250px, 94%);
+      margin: 0 auto;
+      padding: 35px 0 70px;
+    }
+
+    /* =========================
+       WELCOME
+       ========================= */
+
+    .welcome {
+      position: relative;
+      overflow: hidden;
+      padding: 35px;
+      border-radius: 26px;
+      background:
+        linear-gradient(
+          135deg,
+          #dceefa,
+          #edf6fc 55%,
+          #d2e6f6
+        );
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .welcome::before {
+      content: "🔨";
+      position: absolute;
+      right: 55px;
+      top: 10px;
+      font-size: 90px;
+      opacity: .12;
+      transform: rotate(-18deg);
+    }
+
+    .welcome::after {
+      content: "🪚";
+      position: absolute;
+      right: 145px;
+      bottom: -25px;
+      font-size: 75px;
+      opacity: .08;
+      transform: rotate(12deg);
+    }
+
+    .welcome-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      color: var(--blue-dark);
+      font-weight: 800;
+      font-size: .78rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .welcome h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .welcome p {
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    /* =========================
+       TOOL STRIP
+       ========================= */
+
+    .tool-strip {
+      display: grid;
+      grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .tool {
+      background: rgba(255,255,255,.65);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 14px 10px;
+      text-align: center;
+      transition: .2s ease;
+    }
+
+    .tool:hover {
+      transform: translateY(-4px);
+      background: #f5faff;
+      box-shadow: var(--shadow);
+    }
+
+    .tool span {
+      display: block;
+      font-size: 29px;
+      margin-bottom: 5px;
+    }
+
+    .tool small {
+      color: var(--navy);
+      font-weight: 700;
+      font-size: .72rem;
+    }
+
+    /* =========================
+       STATS
+       ========================= */
+
+    .stats {
+      display: grid;
+      grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+      gap: 17px;
+      margin-bottom: 32px;
+    }
+
+    .stat {
+      position: relative;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat::after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--ice-2);
+      right: -25px;
+      bottom: -30px;
+    }
+
+    .stat-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--navy);
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .83rem;
+      font-weight: 600;
+    }
+
+    /* =========================
+       SECTION
+       ========================= */
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .section-heading h3 {
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      font-size: 1.65rem;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    /* =========================
+       QUICK ACTIONS
+       ========================= */
+
+    .quick-actions {
+      display: grid;
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .action {
+      border: 1px solid var(--border);
+      background: linear-gradient(
+        145deg,
+        #f3f9fe,
+        #e4f1fa
+      );
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align: left;
+      color: var(--text);
+      box-shadow: var(--shadow);
+      transition: .22s ease;
+    }
+
+    .action:hover {
+      transform: translateY(-5px);
+      border-color: #9ec2e2;
+    }
+
+    .action-icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #d7eafa;
+      font-size: 27px;
+      margin-bottom: 13px;
+    }
+
+    .action strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .action span {
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    /* =========================
+       TWO COLUMN AREA
+       ========================= */
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 22px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 23px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    /* =========================
+       ORDERS
+       ========================= */
+
+    .order {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .order:last-child {
+      border-bottom: 0;
+    }
+
+    .order-icon {
+      flex: 0 0 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      background: #dcecf8;
+      border-radius: 13px;
+      font-size: 22px;
+    }
+
+    .order-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .order-info strong {
+      display: block;
+      color: var(--navy);
+      font-size: .9rem;
+    }
+
+    .order-info small {
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    .status {
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #dcecff;
+      color: var(--blue);
+      font-size: .7rem;
+      font-weight: 800;
+    }
+
+    /* =========================
+       PRODUCT SUMMARY
+       ========================= */
+
+    .product-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-row:last-child {
+      border-bottom: 0;
+    }
+
+    .product-name {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+    }
+
+    .product-picture {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #d9eaf7;
+      font-size: 21px;
+    }
+
+    .product-name strong {
+      display: block;
+      color: var(--navy);
+      font-size: .84rem;
+    }
+
+    .product-name small {
+      color: var(--muted);
+      font-size: .72rem;
+    }
+
+    /* =========================
+       INVENTORY
+       ========================= */
+
+    .inventory {
+      display: grid;
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .inventory-card {
+      background: #e7f2fa;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .inventory-card .big-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .inventory-card strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .inventory-card span {
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .dashboard-footer {
+      text-align: center;
+      color: var(--muted);
+      padding-top: 20px;
+      font-size: .8rem;
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 1000px) {
+
+      .stats {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+      .tool-strip {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+      .quick-actions {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .topbar {
+        height: 68px;
+        padding: 0 15px;
+      }
+
+      .brand h1 {
+        font-size: 1rem;
+      }
+
+      .brand small {
+        font-size: .62rem;
+      }
+
+      .brand-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+      }
+
+      .view-site {
+        padding: 8px 10px;
+        font-size: .75rem;
+      }
+
+      .dashboard {
+        width: 92%;
+        padding-top: 20px;
+      }
+
+      .welcome {
+        padding: 25px 20px;
+      }
+
+      .welcome::before {
+        right: -5px;
+        font-size: 70px;
+      }
+
+      .welcome::after {
+        right: 65px;
+        font-size: 55px;
+      }
+
+      .welcome h2 {
+        font-size: 2rem;
+      }
+
+      .tool-strip {
+        grid-template-columns:
+          repeat(3, 1fr);
+        gap: 8px;
+      }
+
+      .tool {
+        padding: 10px 5px;
+      }
+
+      .tool span {
+        font-size: 24px;
+      }
+
+      .tool small {
+        font-size: .65rem;
+      }
+
+      .stats {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .stat {
+        padding: 18px;
+      }
+
+      .stat strong {
+        font-size: 1.65rem;
+      }
+
+      .quick-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .inventory {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .order {
+        align-items: flex-start;
+      }
+
+      .status {
+        font-size: .62rem;
+      }
+    }
+
+    @media (max-width: 390px) {
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-strip {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .welcome h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+       ========================= -->
+
+  <header class="topbar">
+
+    <div class="brand">
+
+      <div class="brand-icon">
+        🔨
+      </div>
+
+      <div>
+        <h1>Favourite Florish</h1>
+        <small>Admin Dashboard</small>
+      </div>
+
+    </div>
+
+    <button
+      class="view-site"
+      onclick="window.location.href='/'"
+    >
+      View Website
+    </button>
+
+  </header>
+
+
+  <main class="dashboard">
+
+    <!-- =========================
+         WELCOME
+         ========================= -->
+
+    <section class="welcome">
+
+      <div class="welcome-content">
+
+        <div class="eyebrow">
+          Business Control Centre
+        </div>
+
+        <h2>
+          Manage Favourite Florish
+        </h2>
+
+        <p>
+          Keep track of your products, orders, quotations
+          and building-material inventory from one place.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TOOL VISUAL STRIP
+         ========================= -->
+
+    <div class="tool-strip">
+
+      <div class="tool">
+        <span>🔨</span>
+        <small>Hammers</small>
+      </div>
+
+      <div class="tool">
+        <span>🪚</span>
+        <small>Saws</small>
+      </div>
+
+      <div class="tool">
+        <span>🧱</span>
+        <small>Blocks</small>
+      </div>
+
+      <div class="tool">
+        <span>🏠</span>
+        <small>Roofing</small>
+      </div>
+
+      <div class="tool">
+        <span>🪵</span>
+        <small>Timber</small>
+      </div>
+
+      <div class="tool">
+        <span>📦</span>
+        <small>Orders</small>
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         STATS
+         ========================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <div>
+          <h3>Business Overview</h3>
+          <p>Your store at a glance.</p>
+        </div>
+
+      </div>
+
+      <div class="stats">
+
+        <div class="stat">
+          <div class="stat-icon">📦</div>
+          <strong id="productCount">0</strong>
+          <span>Total Products</span>
+        </div>
+
+        <div class="stat">
+          <div class="stat-icon">🛒</div>
+          <strong id="orderCount">0</strong>
+          <span>Total Orders</span>
+        </div>
+
+        <div class="stat">
+          <div class="stat-icon">⏳</div>
+          <strong id="pendingCount">0</strong>
+          <span>Pending Orders</span>
+        </div>
+
+        <div class="stat">
+          <div class="stat-icon">📝</div>
+          <strong id="quoteCount">0</strong>
+          <span>Quote Requests</span>
+        </div>
+
+        <div class="stat">
+          <div class="stat-icon">⭐</div>
+          <strong id="featuredCount">0</strong>
+          <span>Featured Products</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUICK ACTIONS
+         ========================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <div>
+          <h3>Quick Actions</h3>
+          <p>Common things you may want to manage.</p>
+        </div>
+
+      </div>
+
+      <div class="quick-actions">
+
+        <button
+          class="action"
+          onclick="goToWebsite()"
+        >
+          <div class="action-icon">➕</div>
+          <strong>Add Product</strong>
+          <span>
+            Add new materials to your catalogue.
+          </span>
+        </button>
+
+        <button
+          class="action"
+          onclick="goToWebsite()"
+        >
+          <div class="action-icon">📋</div>
+          <strong>View Orders</strong>
+          <span>
+            Check customer orders and requests.
+          </span>
+        </button>
+
+        <button
+          class="action"
+          onclick="loadDashboard()"
+        >
+          <div class="action-icon">🔄</div>
+          <strong>Refresh Dashboard</strong>
+          <span>
+            Get the latest business information.
+          </span>
+        </button>
+
+        <button
+          class="action"
+          onclick="window.open('https://wa.me/2347037671791','_blank')"
+        >
+          <div class="action-icon">💬</div>
+          <strong>WhatsApp</strong>
+          <span>
+            Contact Favourite Florish directly.
+          </span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ORDERS + PRODUCTS
+         ========================= -->
+
+    <section class="section">
+
+      <div class="two-column">
+
+        <div class="panel">
+
+          <div class="section-heading">
+            <div>
+              <h3>Recent Orders</h3>
+              <p>Latest customer activity.</p>
+            </div>
+          </div>
+
+          <div id="recentOrders">
+
+            <div class="order">
+
+              <div class="order-icon">
+                🛒
+              </div>
+
+              <div class="order-info">
+                <strong>Loading orders...</strong>
+                <small>
+                  Please wait
+                </small>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="panel">
+
+          <div class="section-heading">
+            <div>
+              <h3>Products</h3>
+              <p>Catalogue overview.</p>
+            </div>
+          </div>
+
+          <div id="recentProducts">
+
+            <div class="product-row">
+
+              <div class="product-name">
+
+                <div class="product-picture">
+                  🪵
+                </div>
+
+                <div>
+                  <strong>
+                    Loading products...
+                  </strong>
+
+                  <small>
+                    Please wait
+                  </small>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MATERIALS
+         ========================= -->
+
+    <section class="section">
+
+      <div class="section-heading">
+
+        <div>
+          <h3>Material Categories</h3>
+          <p>
+            Main categories represented in your store.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="inventory">
+
+        <div class="inventory-card">
+          <div class="big-icon">🪵</div>
+          <strong>Timber & Wood</strong>
+          <span>
+            2×2, 2×3, 2×4, 1×6 and more.
+          </span>
+        </div>
+
+        <div class="inventory-card">
+          <div class="big-icon">🏠</div>
+          <strong>Roofing Materials</strong>
+          <span>
+            Materials for roofing projects.
+          </span>
+        </div>
+
+        <div class="inventory-card">
+          <div class="big-icon">🧱</div>
+          <strong>Cement & Blocks</strong>
+          <span>
+            Essential building materials.
+          </span>
+        </div>
+
+        <div class="inventory-card">
+          <div class="big-icon">🔨</div>
+          <strong>Tools</strong>
+          <span>
+            Hammers, saws, cutlasses and more.
+          </span>
+        </div>
+
+        <div class="inventory-card">
+          <div class="big-icon">🪢</div>
+          <strong>Ropes & Nets</strong>
+          <span>
+    

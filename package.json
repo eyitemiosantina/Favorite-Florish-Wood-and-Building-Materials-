@@ -1,0 +1,12 @@
+{
+  "name": "favourite-florish",
+  "version": "1.0.0",
+  "description": "Favourite Florish Wood and Building Materials website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
